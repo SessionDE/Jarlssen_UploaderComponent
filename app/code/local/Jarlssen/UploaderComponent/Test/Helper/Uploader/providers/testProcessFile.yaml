@@ -1,0 +1,5 @@
+-
+  - upload_single_file
+  - upload_dir: "test_upload_directory/thumbnail"
+    allowed_extensions: "jpg,png,gif"
+    input_name: "thumbnail"

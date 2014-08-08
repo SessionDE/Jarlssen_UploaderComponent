@@ -1,0 +1,10 @@
+-
+  - two_files_uploaded_in_previous_reuqest
+  - upload_dir: "test_upload_directory/thumbnail"
+    allowed_extensions: "jpg,png,gif"
+    input_name: "thumbnail"
+    db_value : test_upload_directory/thumbnail/gnu-test_file.png
+  - upload_dir: "test_upload_directory/pdf_file"
+    allowed_extensions: "pdf"
+    input_name: "pdf_file"
+    db_value : test_upload_directory/pdf_file/pdf.pdf

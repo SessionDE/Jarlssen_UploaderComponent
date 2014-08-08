@@ -1,0 +1,3 @@
+# Jarlssen_UploaderComponent definition
+app/etc/modules/*.xml                                      app/etc/modules/
+app/code/local/*                                           app/code/local/

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author      Tsvetan Stoychev <tsvetan.stoychev@jarlssen.de>
+ * @website     http://www.jarlssen.de
+ * @license     http://opensource.org/licenses/osl-3.0.php Open Software Licence 3.0 (OSL-3.0)
+ */
+-->
+<config>
+    <phpunit>
+        <suite>
+            <modules>
+                <Jarlssen_UploaderComponent />
+            </modules>
+        </suite>
+    </phpunit>
+
+    <modules>
+        <Jarlssen_UploaderComponent>
+            <version>0.0.1</version>
+        </Jarlssen_UploaderComponent>
+    </modules>
+
+    <global>
+        <helpers>
+            <jarlssen_uploader_component>
+                <class>Jarlssen_UploaderComponent_Helper</class>
+            </jarlssen_uploader_component>
+        </helpers>
+
+        <models>
+            <jarlssen_uploader_component>
+                <class>Jarlssen_UploaderComponent_Model</class>
+            </jarlssen_uploader_component>
+        </models>
+    </global>
+
+    <adminhtml>
+        <events>
+            <model_save_before>
+                <observers>
+                    <jarlssen_uploader_component_process_uploads>
+                        <type>model</type>
+                        <class>jarlssen_uploader_component/observer</class>
+                        <method>processUploads</method>
+                    </jarlssen_uploader_component_process_uploads>
+                </observers>
+            </model_save_before>
+        </events>
+    </adminhtml>
+</config>
