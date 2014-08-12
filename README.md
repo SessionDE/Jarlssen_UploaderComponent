@@ -3,7 +3,7 @@ Short info: Jarlssen_UploaderComponent
 
 This is simple developer's extension that provides file upload functionality for the standard Magento admin forms. To get it to work, the developer just needs to install the module and add some configuration to his own module.
 
-## The configuration is pretty simple and it has three mandatory components:
+### The configuration is pretty simple and it has three mandatory components:
 
 - Class name of the model, that we want to give file upload functionality to
 - The name for the <input type="file"> element
@@ -13,9 +13,9 @@ The extension also has the option to validate the uploaded file's extension, but
 
 The module also works with the standard Magento image form inputs, so once the image is uploaded you can also use the delete checkbox. So far on delete the module just erases the saved file path in the database, but the file still stays on the file system.
 
-## Step by step example how you can make it work:
+### Step by step example how you can make it work:
 
-1. Add a dependency in your module:
+* Add a dependency in your module:
 ```
 <?xml version="1.0"?>
 <config>
@@ -30,7 +30,7 @@ The module also works with the standard Magento image form inputs, so once the i
     </modules>
 </config>
 ```
-2. Add configuration in your custom module's config.xml. For example:
+* Add configuration in your custom module's config.xml. For example:
 ```
 <global>
 ...
@@ -53,7 +53,7 @@ The module also works with the standard Magento image form inputs, so once the i
 ...
 </global>
 ```
-3. You should already have the file inputs in your admin form (note that this works with 'type' as 'image' and as 'file')
+* You should already have the file inputs in your admin form (note that this works with 'type' as 'image' and as 'file')
 ```
 <?php
 ...
