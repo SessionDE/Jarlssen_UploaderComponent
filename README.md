@@ -16,7 +16,7 @@ The module also works with the standard Magento image form inputs, so once the i
 ### Step by step example how you can make it work:
 
 * Add a dependency in your module:
-```
+```xml
 <?xml version="1.0"?>
 <config>
     <modules>
@@ -31,7 +31,7 @@ The module also works with the standard Magento image form inputs, so once the i
 </config>
 ```
 * Add configuration in your custom module's config.xml. For example:
-```
+```xml
 <global>
 ...
   <jarlssen_uploader_component_config>
@@ -54,7 +54,7 @@ The module also works with the standard Magento image form inputs, so once the i
 </global>
 ```
 * You should already have the file inputs in your admin form (note that this works with 'type' as 'image' and as 'file')
-```
+```php
 <?php
 ...
 $fieldset->addField('thumbnail', 'image', array(
